@@ -1,15 +1,15 @@
-let kanyeAPI = "https://api.kanye.rest";
-let trumpAPI = "https://api.tronalddump.io/random/quote";
+let randomQuoteAPI = "https://api.quotable.io/random";
+let nameGeneratorAPI = "https://api.api-ninjas.com/v1/celebrity?name=";
 
 
-fetch(trumpAPI)
+fetch(randomQuoteAPI)
     .then(response => response.json())
     .then(function (result) {
         console.log(result)
     });
 
-fetch(kanyeAPI)
-    .then(response => response.json())
-    .then(function (result) {
-        console.log(result)
-    });
+    fetch("https://api.api-ninjas.com/v1/celebrity?name=michael",
+      {headers:{"X-Api-Key": "HM4MOd3dfGVsQX8AqXnjlw==ElN28B6ZXeTJkHQM"}}
+     )
+.then(response => response.json())
+.then(data => console.log(data))
