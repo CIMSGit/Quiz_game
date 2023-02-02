@@ -1,4 +1,6 @@
 .hero {
   color: blue;
   background-color: rgb(188, 202, 149);
+  font-style: italic;
+  font-weight: 900;
 }
