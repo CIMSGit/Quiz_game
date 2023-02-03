@@ -8,12 +8,12 @@ let NameButton3 = document.querySelector("#NameButton3");
 
 // common name generation from array
 let commonNamesArray =["michael", "Steve", "Jennifer", "Martin", "William", "Charlotte", "Mary", "James", "Robert", "David", "Elizabeth", "Sarah"]
-let randomName = commonNamesArray[Math.floor(Math.random()*commonNamesArray.length)]
 
 
 
 // function to grab a celebrity name from the api
-function randomCelebrityNameGenerator(){
+function randomCelebrityNameGenerator(button){
+    let randomName = commonNamesArray[Math.floor(Math.random()*commonNamesArray.length)]
     fetch("https://api.api-ninjas.com/v1/celebrity?name=" + randomName,
       {headers:{"X-Api-Key": "HM4MOd3dfGVsQX8AqXnjlw==ElN28B6ZXeTJkHQM"}}
      )
@@ -27,12 +27,13 @@ let randomCelebrityName = randomCelebrityNameArray[Math.floor(Math.random()*rand
 
 let celebrityName = randomCelebrityName.name;
     
-    NameButton2.textContent = celebrityName;
+    button.textContent = celebrityName;
 
 })
 }
 
-randomCelebrityNameGenerator()
+randomCelebrityNameGenerator(NameButton2)
+randomCelebrityNameGenerator(NameButton3)
 
 displayQuote()
 
