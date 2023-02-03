@@ -23,11 +23,11 @@ This Quote App will enable the user to browse and read random quotations from di
 
 ## 2. Built with:
 
-\*\* Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
-** API  
-** JavaScript
-** CSS
-** HTML
+- Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+- API
+- JavaScript
+- CSS
+- HTML
 
 ## 3. How to use the app
 
