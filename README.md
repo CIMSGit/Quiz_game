@@ -53,7 +53,7 @@ Quoting is an important technique used to include information from outside sourc
 
 ### https://api.quotable.io/random
 
-### https://api.api-ninjas.com/v1/celebrity?name=
+### https://api-ninjas.com/api/celebrity
 
 ## 7. License
 
