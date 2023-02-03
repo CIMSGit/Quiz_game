@@ -49,6 +49,12 @@ Quoting is an important technique used to include information from outside sourc
 
 - https://getbootstrap.com/docs/5.3/components/buttons/
 
+## API Reference
+
+### https://api.quotable.io/random
+
+### https://api.api-ninjas.com/v1/celebrity?name=
+
 ## 7. License
 
 This project is licensed by MIT.
