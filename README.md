@@ -2,7 +2,9 @@
 
 ## Description
 
-Quoting is an important technique used to include information from outside sources in academic writing. When using quotations, it is important that you also cite the original reference that you have taken the quotation from.
+Quoting is an important technique used to include information from outside sources. When using quotations, it is important that you also cite the original reference that you have taken the quotation from.
+
+This Quote App will enable the user to browse and read random quotations from different authors. The users can choose the category of their interest and enjoy reading the quotes from different authors.
 
 ## Table of Content
 
@@ -21,17 +23,17 @@ Quoting is an important technique used to include information from outside sourc
 
 ## 2. Built with:
 
-\*\* Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
-** API  
-** JavaScript
-** CSS
-** HTML
+- Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+- API
+- JavaScript
+- CSS
+- HTML
 
-## How to use the app
+## 3. How to use the app
 
-- 1.
-- 2.
-- 3.
+1.
+2.
+3.
 
 ## 4. Links
 
@@ -49,6 +51,16 @@ Quoting is an important technique used to include information from outside sourc
 
 - https://getbootstrap.com/docs/5.3/components/buttons/
 
-## 7. License
+- https://api-ninjas.com/
+
+- https://github.com/lukePeavey/quotable#get-random-quote
+
+## API Reference
+
+### https://api.quotable.io/random
+
+### https://api-ninjas.com/api/celebrity
+
+## 6. License
 
 This project is licensed by MIT.
