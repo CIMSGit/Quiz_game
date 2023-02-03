@@ -4,3 +4,8 @@
   font-style: italic;
   font-weight: 900;
 }
+.btn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+}
