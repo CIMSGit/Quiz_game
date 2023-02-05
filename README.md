@@ -1,4 +1,4 @@
-# Project1
+# Project1 - Who said the Qoute Quiz
 
 ## Description
 
@@ -55,11 +55,11 @@ This Quote App will enable the user to browse and read random quotations from di
 
 - https://github.com/lukePeavey/quotable#get-random-quote
 
-## API Reference
+### API Reference
 
-### https://api.quotable.io/random
+#### https://api.quotable.io/random
 
-### https://api-ninjas.com/api/celebrity
+#### https://api-ninjas.com/api/celebrity
 
 ## 6. License
 
