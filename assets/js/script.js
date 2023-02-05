@@ -127,11 +127,12 @@ function highlightCorrectAnswer() {
     // console.log(" button 1 was correct ");
     NameButton1.style.backgroundColor = "green";
   } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
-    // button 2 was correct answer
+    // console.log(" button 2 was correct ");
     NameButton2.style.backgroundColor = "green";
   } else {
-    // button 3 was correct answer
+    // console.log(" button 3 was correct ");
     NameButton3.style.backgroundColor = "green";
   }
   // pause for 5 seconds so that the User can see the correct answer
+  //set time out
 }
