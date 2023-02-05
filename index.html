@@ -1,101 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
 
-  <body>
-    <!-- navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- heading -->
-    <div class="jumbotron jumbotron-fluid hero">
-      <div class="container">
-        <h1 class="display-4 text-center">Who said the QUOTE quiz!</h1>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who said the Quote Quiz</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
     </div>
-
-    <!-- location for quote question -->
-    <div
-      class="card d-flex justify-content-center mx-auto"
-      style="width: 18rem"
-    >
-      <img
-        src="./assets/images/577fdd4e8c36b.jpg"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title text-center">Question 1</h5>
-        <p class="card-text" id="quoteDisplay">
-        </p>
-      </div>
+  </nav>
+  <!-- heading -->
+  <div class="jumbotron jumbotron-fluid hero">
+    <div class="container">
+      <h1 class="display-4 text-center">Who said the QUOTE quiz!</h1>
     </div>
-    <!-- buttons for selecting an answer -->
-
-    <div class="container mt-2">
-      <div class="text-left ">
-          <button type="button" class="btn btn-secondary col-6" id="NameButton1" ></button>
-
-      </div>
-
-      <div class="text-center mt-2">
-        <button type="button" class="btn btn-secondary col-6" id="NameButton2" ></button>
-      </div>
-
-      <div class="text-right mt-2">
-        <button type="button" class="btn btn-secondary col-6" id="NameButton3" ></button>
-      
-      </div>
+  </div>
+  <!-- start button -->
+  <div class="container text-center mx-auto" id="startButton">
+    <div class="">
+      <button type="button" class="btn btn-secondary col-6 bg-info text-white" id="">Start</button>
+    </div>
 
   </div>
 
-    <script src="./assets/js/script.js"></script>
-  </body>
+  <!-- location for quote question -->
+  <div class="card d-flex justify-content-center mx-auto mt-3" style="width: 18rem">
+    <img src="./assets/images/577fdd4e8c36b.jpg" class="card-img-top " alt="..." />
+    <div class="card-body">
+      <h5 class="card-title text-center hide" id="questionNumber"></h5>
+      <p class="card-text hide" id="quoteDisplay">
+      </p>
+    </div>
+  </div>
+  <!-- buttons for selecting an answer -->
+
+  <div class="container mt-2 hide" id="answerbuttons">
+    <div class="text-left">
+      <button type="button" class="btn btn-secondary col-6" id="NameButton1"></button>
+
+    </div>
+
+    <div class="text-center mt-2">
+      <button type="button" class="btn btn-secondary col-6" id="NameButton2"></button>
+    </div>
+
+    <div class="text-right mt-2">
+      <button type="button" class="btn btn-secondary col-6" id="NameButton3"></button>
+
+    </div>
+
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>

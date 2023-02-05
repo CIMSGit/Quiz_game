@@ -9,3 +9,11 @@
   margin-bottom: 10px;
   height: 50px;
 }
+
+.hide {
+  display: none;
+}
+
+#startButton{
+  background-color: rgb(188, 202, 149);
+}
