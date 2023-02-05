@@ -57,8 +57,6 @@ function randomCelebrityNameGenerator(button) {
     });
 }
 
-//displayQuote();
-
 function displayQuote() {
   quoteDisplay.textContent = "";
   fetch(randomQuoteAPI)
@@ -70,21 +68,24 @@ function displayQuote() {
       correctAnswer = JSON.stringify(result.author);
       //get randomn number between 1 and 3 to randomise button with correct answer
       correctButton = Math.floor(Math.random() * 3) + 1;
-      if (correctButton == 1) {
+      if (correctButton === 1) {
+        randomCelebrityNameGenerator(NameButton2);
+        randomCelebrityNameGenerator(NameButton3);
         NameButton1.textContent = correctAnswer.toUpperCase();
-        randomCelebrityNameGenerator(NameButton2);
+      } else if (correctButton === 2) {
+        randomCelebrityNameGenerator(NameButton1);
         randomCelebrityNameGenerator(NameButton3);
-      } else if (correctButton == 2) {
         NameButton2.textContent = correctAnswer.toUpperCase();
-        randomCelebrityNameGenerator(NameButton1);
-        randomCelebrityNameGenerator(NameButton3);
       } else {
-        NameButton3.textContent = correctAnswer.toUpperCase();
         randomCelebrityNameGenerator(NameButton1);
         randomCelebrityNameGenerator(NameButton2);
+        NameButton3.textContent = correctAnswer.toUpperCase();
       }
       // check the correct answer is displaying on random buttons
       console.log("Correct answer " + correctAnswer.toUpperCase());
+      NameButton1.style.backgroundColor = "";
+      NameButton2.style.backgroundColor = "";
+      NameButton3.style.backgroundColor = "";
     });
 }
 
@@ -105,8 +106,6 @@ function populateAnswers() {
 
   displayQuote();
 
-  //randomCelebrityNameGenerator(NameButton2);
-  //randomCelebrityNameGenerator(NameButton3);
   questionNumberDisplay();
 }
 
@@ -124,17 +123,15 @@ startButton.addEventListener("click", function (event) {
 });
 
 function highlightCorrectAnswer() {
-  console.log("answerbutton1 " + NameButton1.innerText);
-  console.log("answerbutton2 " + NameButton2.innerText);
-  console.log("answerbutton3 " + NameButton3.innerText);
-  console.log("correct answer " + correctAnswer);
-
-  if (NameButton1.innerText == correctAnswer.toUpperCase()) {
-    console.log(" button 1 was correct ");
-  } else if (NameButton2.innerText == correctAnswer.toUpperCase()) {
+  if (NameButton1.innerText === correctAnswer.toUpperCase()) {
+    // console.log(" button 1 was correct ");
+    NameButton1.style.backgroundColor = "green";
+  } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
     // button 2 was correct answer
+    NameButton2.style.backgroundColor = "green";
   } else {
     // button 3 was correct answer
+    NameButton3.style.backgroundColor = "green";
   }
   // pause for 5 seconds so that the User can see the correct answer
 }
