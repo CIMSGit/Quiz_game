@@ -27,16 +27,16 @@ fetch(`https://api.api-ninjas.com/v1/celebrity?name=""`, {
   .then((response) => response.json())
   .then((data) => console.log(data));
 
-displayQuote();
+//displayQuote();
 
-function displayQuote() {
-  fetch(randomQuoteAPI)
-    .then((response) => response.json())
-    .then(function (result) {
-      console.log(result);
-      quoteDisplay.textContent = result.content;
-    });
-}
+// function displayQuote() {
+//   fetch(randomQuoteAPI)
+//     .then((response) => response.json())
+//     .then(function (result) {
+//       console.log(result);
+//       quoteDisplay.textContent = result.content;
+//     });
+// }
 // function to grab a celebrity name from the api
 function randomCelebrityNameGenerator(button) {
   let randomName =
@@ -62,8 +62,8 @@ function randomCelebrityNameGenerator(button) {
     });
 }
 
-randomCelebrityNameGenerator(NameButton2);
-randomCelebrityNameGenerator(NameButton3);
+//randomCelebrityNameGenerator(NameButton2);
+//randomCelebrityNameGenerator(NameButton3);
 
 displayQuote();
 
@@ -75,7 +75,23 @@ function displayQuote() {
 
       quoteDisplay.textContent = result.content;
       let correctAnswer = JSON.stringify(result.author);
-      NameButton1.textContent = correctAnswer.toUpperCase();
+      //NameButton1.textContent = correctAnswer.toUpperCase();
+      //get randomn number between 1 and 3 to randomise button with correct answer
+      let correctButton = Math.floor(Math.random() * 3) + 1;
+      if (correctButton == 1) {
+        NameButton1.textContent = correctAnswer.toUpperCase();
+        randomCelebrityNameGenerator(NameButton2);
+        randomCelebrityNameGenerator(NameButton3);
+      } else if (correctButton == 2) {
+        NameButton2.textContent = correctAnswer.toUpperCase();
+        randomCelebrityNameGenerator(NameButton1);
+        randomCelebrityNameGenerator(NameButton3);
+      } else {
+        NameButton3.textContent = correctAnswer.toUpperCase();
+        randomCelebrityNameGenerator(NameButton1);
+        randomCelebrityNameGenerator(NameButton2);
+      }
+      console.log("Correct answer " + correctAnswer.toUpperCase());
     });
 }
 
