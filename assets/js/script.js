@@ -5,9 +5,9 @@ let NameButton1 = document.querySelector("#NameButton1");
 let NameButton2 = document.querySelector("#NameButton2");
 let NameButton3 = document.querySelector("#NameButton3");
 
-// common name generation from array
+//common name generation from array
 let commonNamesArray = [
-  "michael",
+  "Michael",
   "Steve",
   "Jennifer",
   "Martin",
@@ -21,7 +21,7 @@ let commonNamesArray = [
   "Sarah",
 ];
 
-fetch("https://api.api-ninjas.com/v1/celebrity?name=michael", {
+fetch(`https://api.api-ninjas.com/v1/celebrity?name=""`, {
   headers: { "X-Api-Key": "HM4MOd3dfGVsQX8AqXnjlw==ElN28B6ZXeTJkHQM" },
 })
   .then((response) => response.json())
@@ -34,7 +34,6 @@ function displayQuote() {
     .then((response) => response.json())
     .then(function (result) {
       console.log(result);
-
       quoteDisplay.textContent = result.content;
     });
 }
@@ -56,9 +55,10 @@ function randomCelebrityNameGenerator(button) {
           Math.floor(Math.random() * randomCelebrityNameArray.length)
         ];
 
-      let celebrityName = randomCelebrityName.name;
+      let celebrityName = JSON.stringify(randomCelebrityName.name);
 
-      button.textContent = celebrityName;
+      //button.textContent = toUpperCase(JSON.stringify(celebrityName));
+      button.textContent = celebrityName.toUpperCase();
     });
 }
 
@@ -74,6 +74,12 @@ function displayQuote() {
       // console.log(result)
 
       quoteDisplay.textContent = result.content;
-      NameButton1.textContent = result.author;
+      let correctAnswer = JSON.stringify(result.author);
+      NameButton1.textContent = correctAnswer.toUpperCase();
     });
 }
+
+// function highlightEl(params) {}
+let buttonClicked = null;
+
+function highlightEl() {}
