@@ -57,11 +57,7 @@ function randomCelebrityNameGenerator(button) {
     });
 }
 
-displayQuote();
-
-let celebrityName = randomCelebrityName.name;
-
-button.textContent = celebrityName;
+//displayQuote();
 
 function displayQuote() {
   quoteDisplay.textContent = "";
@@ -90,9 +86,6 @@ function displayQuote() {
       // check the correct answer is displaying on random buttons
       console.log("Correct answer " + correctAnswer.toUpperCase());
     });
-
-  quoteDisplay.textContent = result.content;
-  NameButton1.textContent = result.author;
 }
 
 let number = 0;
@@ -105,10 +98,15 @@ function questionNumberDisplay() {
 }
 
 function populateAnswers() {
+  // highlight current answer before showing next question
+  if (number > 0) {
+    highlightCorrectAnswer();
+  }
+
   displayQuote();
 
-  randomCelebrityNameGenerator(NameButton2);
-  randomCelebrityNameGenerator(NameButton3);
+  //randomCelebrityNameGenerator(NameButton2);
+  //randomCelebrityNameGenerator(NameButton3);
   questionNumberDisplay();
 }
 
@@ -124,3 +122,19 @@ startButton.addEventListener("click", function (event) {
 
   populateAnswers();
 });
+
+function highlightCorrectAnswer() {
+  console.log("answerbutton1 " + NameButton1.innerText);
+  console.log("answerbutton2 " + NameButton2.innerText);
+  console.log("answerbutton3 " + NameButton3.innerText);
+  console.log("correct answer " + correctAnswer);
+
+  if (NameButton1.innerText == correctAnswer.toUpperCase()) {
+    console.log(" button 1 was correct ");
+  } else if (NameButton2.innerText == correctAnswer.toUpperCase()) {
+    // button 2 was correct answer
+  } else {
+    // button 3 was correct answer
+  }
+  // pause for 5 seconds so that the User can see the correct answer
+}
