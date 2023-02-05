@@ -29,11 +29,15 @@ fetch(`https://api.api-ninjas.com/v1/celebrity?name=""`, {
   .then((response) => response.json())
   .then((data) => console.log(data));
 
+let answerbuttons = document.querySelector("#answerbuttons");
+let questionNumber = document.querySelector("#questionNumber");
+let startButton = document.querySelector("#startButton");
+
 // function to grab a celebrity name from the api
 function randomCelebrityNameGenerator(button) {
   let randomName =
     commonNamesArray[Math.floor(Math.random() * commonNamesArray.length)];
-  fetch("https://api.api-ninjas.com/v1/celebrity?name=" + randomName, {
+  fetch(nameGeneratorAPI + randomName, {
     headers: { "X-Api-Key": "HM4MOd3dfGVsQX8AqXnjlw==ElN28B6ZXeTJkHQM" },
   })
     .then((response) => response.json())
@@ -55,7 +59,12 @@ function randomCelebrityNameGenerator(button) {
 
 displayQuote();
 
+let celebrityName = randomCelebrityName.name;
+
+button.textContent = celebrityName;
+
 function displayQuote() {
+  quoteDisplay.textContent = "";
   fetch(randomQuoteAPI)
     .then((response) => response.json())
     .then(function (result) {
@@ -81,4 +90,37 @@ function displayQuote() {
       // check the correct answer is displaying on random buttons
       console.log("Correct answer " + correctAnswer.toUpperCase());
     });
+
+  quoteDisplay.textContent = result.content;
+  NameButton1.textContent = result.author;
 }
+
+let number = 0;
+function questionNumberDisplay() {
+  if (number < 10) {
+    number++;
+  }
+
+  questionNumber.textContent = "Question " + number;
+}
+
+function populateAnswers() {
+  displayQuote();
+
+  randomCelebrityNameGenerator(NameButton2);
+  randomCelebrityNameGenerator(NameButton3);
+  questionNumberDisplay();
+}
+
+answerbuttons.addEventListener("click", function (event) {
+  populateAnswers();
+});
+
+startButton.addEventListener("click", function (event) {
+  startButton.classList.add("hide");
+  answerbuttons.classList.remove("hide");
+  quoteDisplay.classList.remove("hide");
+  questionNumber.classList.remove("hide");
+
+  populateAnswers();
+});
