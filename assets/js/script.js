@@ -8,7 +8,6 @@ let answerbuttons = document.querySelector("#answerbuttons")
 let questionNumber = document.querySelector("#questionNumber")
 let startButton = document.querySelector("#startButton")
 
-
 // common name generation from array
 let commonNamesArray = ["michael", "Steve", "Jennifer", "Martin", "William", "Charlotte", "Mary", "James", "Robert", "David", "Elizabeth", "Sarah"]
 
