@@ -4,6 +4,8 @@ let quoteDisplay = document.querySelector("#quoteDisplay");
 let NameButton1 = document.querySelector("#NameButton1");
 let NameButton2 = document.querySelector("#NameButton2");
 let NameButton3 = document.querySelector("#NameButton3");
+let correctAnswer = "";
+let correctButton = 0;
 
 //common name generation from array
 let commonNamesArray = [
@@ -27,16 +29,6 @@ fetch(`https://api.api-ninjas.com/v1/celebrity?name=""`, {
   .then((response) => response.json())
   .then((data) => console.log(data));
 
-//displayQuote();
-
-// function displayQuote() {
-//   fetch(randomQuoteAPI)
-//     .then((response) => response.json())
-//     .then(function (result) {
-//       console.log(result);
-//       quoteDisplay.textContent = result.content;
-//     });
-// }
 // function to grab a celebrity name from the api
 function randomCelebrityNameGenerator(button) {
   let randomName =
@@ -57,13 +49,9 @@ function randomCelebrityNameGenerator(button) {
 
       let celebrityName = JSON.stringify(randomCelebrityName.name);
 
-      //button.textContent = toUpperCase(JSON.stringify(celebrityName));
       button.textContent = celebrityName.toUpperCase();
     });
 }
-
-//randomCelebrityNameGenerator(NameButton2);
-//randomCelebrityNameGenerator(NameButton3);
 
 displayQuote();
 
@@ -74,10 +62,9 @@ function displayQuote() {
       // console.log(result)
 
       quoteDisplay.textContent = result.content;
-      let correctAnswer = JSON.stringify(result.author);
-      //NameButton1.textContent = correctAnswer.toUpperCase();
+      correctAnswer = JSON.stringify(result.author);
       //get randomn number between 1 and 3 to randomise button with correct answer
-      let correctButton = Math.floor(Math.random() * 3) + 1;
+      correctButton = Math.floor(Math.random() * 3) + 1;
       if (correctButton == 1) {
         NameButton1.textContent = correctAnswer.toUpperCase();
         randomCelebrityNameGenerator(NameButton2);
@@ -91,11 +78,7 @@ function displayQuote() {
         randomCelebrityNameGenerator(NameButton1);
         randomCelebrityNameGenerator(NameButton2);
       }
+      // check the correct answer is displaying on random buttons
       console.log("Correct answer " + correctAnswer.toUpperCase());
     });
 }
-
-// function highlightEl(params) {}
-let buttonClicked = null;
-
-function highlightEl() {}
