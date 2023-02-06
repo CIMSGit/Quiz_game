@@ -4,16 +4,27 @@
   font-style: italic;
   font-weight: 900;
 }
-.btn{
+.btn {
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 50px;
+  height: 70px;
+  background-color: rgb(29, 91, 142);
 }
 
 .hide {
   display: none;
 }
 
-#startButton{
+#startButton {
   background-color: rgb(188, 202, 149);
+}
+
+.card {
+  width: 30rem;
+}
+
+#NameButton1,
+#NameButton2,
+#NameButton3 {
+  background-color: rgb(29, 91, 142);
 }
