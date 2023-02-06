@@ -4,7 +4,7 @@
 
 Quoting is an important technique used to include information from outside sources. When using quotations, it is important that you also cite the original reference that you have taken the quotation from.
 
-This Quote App will enable the user to browse and read random quotations from different authors. The users can choose the category of their interest and enjoy reading the quotes from different authors.
+This Quote App will let the user test their skills and knowledge by choosing the correct author of the quote.
 
 ## Table of Content
 
@@ -23,17 +23,18 @@ This Quote App will enable the user to browse and read random quotations from di
 
 ## 2. Built with:
 
-- Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
-- API
-- JavaScript
-- CSS
-- HTML
+- **Bootstrap** is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+- **API** are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols.
+- **JavaScript** is a scripting or programming language that allows you to implement complex features on web pages.
+- **CSS** is a computer language for laying out and structuring web pages
+- **HTML** is the standard markup language for creating Web pages, describes the structure of a Web page and consists of a series of elements.
 
 ## 3. How to use the app
 
-1.
-2.
-3.
+1. Click the START button to display the quotes and the choices.
+2. The timer starts when the user clicked the start button.
+3. The chosen button will turn green when user clicked the correct answer.
+4. The user can view the score after the quiz.
 
 ## 4. Links
 
