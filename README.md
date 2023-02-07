@@ -32,10 +32,11 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 ## 3. How to use the app
 
-1. Click the START button to display the quotes and the choices.
-2. The timer starts when the user clicked the start button.
-3. The chosen button will turn green when user clicked the correct answer.
-4. The user can view the score after the quiz.
+1. Read the instruction on how to play the quiz game.
+2. Click the START button to display the quotes and the choices.
+3. The timer starts when the user clicked the start button.
+4. The chosen button will turn green when user clicked the correct answer.
+5. The user can view the score after the quiz.
 
 ## 4. Links
 
