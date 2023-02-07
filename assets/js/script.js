@@ -21,6 +21,16 @@ let commonNamesArray = [
   "David",
   "Elizabeth",
   "Sarah",
+  "Homer",
+  "Geoffrey",
+  "John",
+  "Charles",
+  "Emily",
+  "George",
+  "Henry",
+  "Ann",
+  "Agatha",
+  "Daniel",
 ];
 
 fetch(`https://api.api-ninjas.com/v1/celebrity?name=""`, {
