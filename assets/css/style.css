@@ -1,3 +1,6 @@
+*{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .hero {
   color: blue;
   background-color: rgb(188, 202, 149);
@@ -31,4 +34,13 @@
 
 #finalPage{
 margin: 10px auto;
+}
+
+.scoreDesign{
+ font-family:Arial, Helvetica, sans-serif;
+
+}
+
+#quoteDisplay{
+font-size: 25px;
 }
