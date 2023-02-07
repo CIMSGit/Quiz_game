@@ -28,13 +28,15 @@ This Quote App will let the user test their skills and knowledge by choosing the
 - **JavaScript** is a scripting or programming language that allows you to implement complex features on web pages.
 - **CSS** is a computer language for laying out and structuring web pages
 - **HTML** is the standard markup language for creating Web pages, describes the structure of a Web page and consists of a series of elements.
+- **Local Storage** is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date, the data stored in the browser will persist even after the browser window is closed
 
 ## 3. How to use the app
 
-1. Click the START button to display the quotes and the choices.
-2. The timer starts when the user clicked the start button.
-3. The chosen button will turn green when user clicked the correct answer.
-4. The user can view the score after the quiz.
+1. Read the instruction on how to play the quiz game.
+2. Click the START button to display the quotes and the choices.
+3. The timer starts when the user clicked the start button.
+4. The chosen button will turn green when user clicked the correct answer.
+5. The user can view the score after the quiz.
 
 ## 4. Links
 
@@ -55,6 +57,10 @@ This Quote App will let the user test their skills and knowledge by choosing the
 - https://api-ninjas.com/
 
 - https://github.com/lukePeavey/quotable#get-random-quote
+
+- http://net-informations.com/js/iq/load.htm
+
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 ### API Reference
 

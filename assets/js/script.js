@@ -4,8 +4,10 @@ let quoteDisplay = document.querySelector("#quoteDisplay");
 let NameButton1 = document.querySelector("#NameButton1");
 let NameButton2 = document.querySelector("#NameButton2");
 let NameButton3 = document.querySelector("#NameButton3");
+let score = document.querySelector("#score");
 let correctAnswer = "";
 let correctButton = 0;
+let celebrityName = "";
 
 //common name generation from array
 let commonNamesArray = [
@@ -21,6 +23,16 @@ let commonNamesArray = [
   "David",
   "Elizabeth",
   "Sarah",
+  "Homer",
+  "Geoffrey",
+  "John",
+  "Charles",
+  "Emily",
+  "George",
+  "Henry",
+  "Ann",
+  "Agatha",
+  "Daniel",
 ];
 
 fetch(`https://api.api-ninjas.com/v1/celebrity?name=""`, {
@@ -50,9 +62,7 @@ function randomCelebrityNameGenerator(button) {
         randomCelebrityNameArray[
           Math.floor(Math.random() * randomCelebrityNameArray.length)
         ];
-
-      let celebrityName = JSON.stringify(randomCelebrityName.name);
-
+      celebrityName = randomCelebrityName.name;
       button.textContent = celebrityName.toUpperCase();
     });
 }
@@ -65,7 +75,7 @@ function displayQuote() {
       // console.log(result)
 
       quoteDisplay.textContent = result.content;
-      correctAnswer = JSON.stringify(result.author);
+      correctAnswer = result.author;
       //get randomn number between 1 and 3 to randomise button with correct answer
       correctButton = Math.floor(Math.random() * 3) + 1;
       if (correctButton === 1) {
@@ -103,14 +113,18 @@ function populateAnswers() {
   if (number > 0) {
     highlightCorrectAnswer();
   }
-
   displayQuote();
 
   questionNumberDisplay();
 }
-
 answerbuttons.addEventListener("click", function (event) {
-  populateAnswers();
+  if (number !== 10) {
+    populateAnswers();
+    highlightCorrectAnswer();
+  } else {
+    // load the score page
+    window.location = "../assets/html/score.html";
+  }
 });
 
 startButton.addEventListener("click", function (event) {
