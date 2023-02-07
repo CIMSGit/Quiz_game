@@ -4,10 +4,15 @@ let quoteDisplay = document.querySelector("#quoteDisplay");
 let NameButton1 = document.querySelector("#NameButton1");
 let NameButton2 = document.querySelector("#NameButton2");
 let NameButton3 = document.querySelector("#NameButton3");
+let answerbuttons = document.querySelector("#answerbuttons");
+let questionNumber = document.querySelector("#questionNumber");
+let startButton = document.querySelector("#startButton");
 let score = document.querySelector("#score");
 let correctAnswer = "";
 let correctButton = 0;
 let celebrityName = "";
+let finalPage = document.querySelectorAll("#finalPage");
+let questionImage = document.querySelector("#questionImage")
 
 //common name generation from array
 let commonNamesArray = [
@@ -35,15 +40,6 @@ let commonNamesArray = [
   "Daniel",
 ];
 
-fetch(`https://api.api-ninjas.com/v1/celebrity?name=""`, {
-  headers: { "X-Api-Key": "HM4MOd3dfGVsQX8AqXnjlw==ElN28B6ZXeTJkHQM" },
-})
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-
-let answerbuttons = document.querySelector("#answerbuttons");
-let questionNumber = document.querySelector("#questionNumber");
-let startButton = document.querySelector("#startButton");
 
 // function to grab a celebrity name from the api
 function randomCelebrityNameGenerator(button) {
@@ -101,11 +97,22 @@ function displayQuote() {
 
 let number = 0;
 function questionNumberDisplay() {
-  if (number < 10) {
+  if (number < 11) {
     number++;
   }
 
   questionNumber.textContent = "Question " + number;
+  if (number === 11) {
+    answerbuttons.classList.add("hide");
+    quoteDisplay.classList.add("hide");
+  questionNumber.classList.add("hide");
+  questionImage.classList.add("hide");
+    for (let i = 0; i < finalPage.length; i++) {
+        
+        finalPage[i].classList.remove("hide");
+    }
+  }
+
 }
 
 function populateAnswers() {
@@ -118,13 +125,10 @@ function populateAnswers() {
   questionNumberDisplay();
 }
 answerbuttons.addEventListener("click", function (event) {
-  if (number !== 10) {
+  
     populateAnswers();
     highlightCorrectAnswer();
-  } else {
-    // load the score page
-    window.location = "../assets/html/score.html";
-  }
+ 
 });
 
 startButton.addEventListener("click", function (event) {
@@ -132,6 +136,7 @@ startButton.addEventListener("click", function (event) {
   answerbuttons.classList.remove("hide");
   quoteDisplay.classList.remove("hide");
   questionNumber.classList.remove("hide");
+  questionImage.classList.remove("hide");
 
   populateAnswers();
 });
