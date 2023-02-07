@@ -13,6 +13,7 @@ let correctButton = 0;
 let celebrityName = "";
 let finalPage = document.querySelectorAll("#finalPage");
 let questionImage = document.querySelector("#questionImage")
+let playAgainButton = document.querySelector("#playAgainButton")
 
 //common name generation from array
 let commonNamesArray = [
@@ -97,6 +98,7 @@ function displayQuote() {
 
 let number = 0;
 function questionNumberDisplay() {
+    
     if (number < 11) {
         number++;
     }
@@ -124,7 +126,9 @@ function populateAnswers() {
 answerbuttons.addEventListener("click", function (event) {
 
     highlightCorrectAnswer();
-    setTimeout(populateAnswers, 3000)
+    highlightIncorrectAnswers();
+    // setTimeout(populateAnswers, 2000)
+    populateAnswers()
 
 });
 
@@ -148,8 +152,27 @@ function highlightCorrectAnswer() {
         // console.log(" button 2 was correct ");
         NameButton2.style.backgroundColor = "green";
     }
-    else {
+    else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
         // console.log(" button 3 was correct ");
         NameButton3.style.backgroundColor = "green";
     }
 }
+function highlightIncorrectAnswers() {
+    
+    if(NameButton1.innerText !== correctAnswer.toUpperCase()){
+        NameButton1.style.backgroundColor = "red";
+    }
+    if (NameButton2.innerText !== correctAnswer.toUpperCase()) {
+        NameButton2.style.backgroundColor = "red";
+    }
+    if (NameButton3.innerText !== correctAnswer.toUpperCase()) {
+        NameButton3.style.backgroundColor = "red";
+    }
+ }
+
+ playAgainButton.addEventListener("click", function (event) {
+    startButton.classList.remove("hide");
+    for (let i = 0; i < finalPage.length; i++) {
+    finalPage[i].classList.add("hide");}
+    number =0;
+ })
