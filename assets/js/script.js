@@ -14,6 +14,7 @@ let celebrityName = "";
 let finalPage = document.querySelectorAll("#finalPage");
 let questionImage = document.querySelector("#questionImage")
 let playAgainButton = document.querySelector("#playAgainButton")
+let score=0;
 
 //common name generation from array
 let commonNamesArray = [
