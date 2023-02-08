@@ -22,43 +22,39 @@ let playAgainButton = document.querySelector("#playAgainButton");
 // if the random celebrity button returns empty use "MC CRUZ"
 let celebrityName = "MC CRUZ";
 
-
-
-let score=0;
+let score = 0;
 
 let scorePoints = 1;
 let choices = Array.from(document.getElementsByClassName("choices"));
 
-
 //common name generation from array
 let commonNamesArray = [
-  "Michael",
-  "Steve",
-  "Jennifer",
-  "Martin",
-  "William",
-  "Charlotte",
-  "Mary",
-  "James",
-  "Robert",
-  "David",
-  "Elizabeth",
-  "Sarah",
-  "Homer",
-  "Geoffrey",
-  "John",
-  "Charles",
-  "Emily",
-  "George",
-  "Henry",
-  "Ann",
-  "Agatha",
-  "Daniel",
+    "Michael",
+    "Steve",
+    "Jennifer",
+    "Martin",
+    "William",
+    "Charlotte",
+    "Mary",
+    "James",
+    "Robert",
+    "David",
+    "Elizabeth",
+    "Sarah",
+    "Homer",
+    "Geoffrey",
+    "John",
+    "Charles",
+    "Emily",
+    "George",
+    "Henry",
+    "Ann",
+    "Agatha",
+    "Daniel",
 ];
 
 // function to grab a celebrity name from the api
 async function randomCelebrityNameGenerator() {
-
     let randomName =
         commonNamesArray[Math.floor(Math.random() * commonNamesArray.length)];
     await fetch(nameGeneratorAPI + randomName, {
@@ -130,12 +126,10 @@ async function displayQuote() {
     NameButton1.style.backgroundColor = "";
     NameButton2.style.backgroundColor = "";
     NameButton3.style.backgroundColor = "";
-
 }
 
 let number = 0;
 function questionNumberDisplay() {
-
     if (number < 11) {
         number++;
     }
@@ -162,47 +156,46 @@ answerbuttons.addEventListener("click", function (event) {
     //   highlightIncorrectAnswers();
     // setTimeout(populateAnswers, 2000);
     populateAnswers();
-
 });
 
 startButton.addEventListener("click", function (event) {
-  startButton.classList.add("hide");
-  answerbuttons.classList.remove("hide");
-  quoteDisplay.classList.remove("hide");
-  questionNumber.classList.remove("hide");
-  questionImage.classList.remove("hide");
+    startButton.classList.add("hide");
+    answerbuttons.classList.remove("hide");
+    quoteDisplay.classList.remove("hide");
+    questionNumber.classList.remove("hide");
+    questionImage.classList.remove("hide");
 
-  populateAnswers();
+    populateAnswers();
 });
 
 function highlightCorrectAnswer() {
-
-  if (NameButton1.innerText === correctAnswer.toUpperCase()) {
-    // console.log(" button 1 was correct ");
-    NameButton1.style.backgroundColor = "green";
-    NameButton2.style.backgroundColor = "red";
-    NameButton3.style.backgroundColor = "red";
-  } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
-    // console.log(" button 2 was correct ");
-    NameButton2.style.backgroundColor = "green";
-    NameButton1.style.backgroundColor = "red";
-    NameButton3.style.backgroundColor = "red";
-  } else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
-    // console.log(" button 3 was correct ");
-    NameButton3.style.backgroundColor = "green";
-    NameButton1.style.backgroundColor = "red";
-    NameButton2.style.backgroundColor = "red";
-  }
+    if (NameButton1.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 1 was correct ");
+        NameButton1.style.backgroundColor = "green";
+        NameButton2.style.backgroundColor = "red";
+        NameButton3.style.backgroundColor = "red";
+    } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 2 was correct ");
+        NameButton2.style.backgroundColor = "green";
+        NameButton1.style.backgroundColor = "red";
+        NameButton3.style.backgroundColor = "red";
+    } else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 3 was correct ");
+        NameButton3.style.backgroundColor = "green";
+        NameButton1.style.backgroundColor = "red";
+        NameButton2.style.backgroundColor = "red";
+    }
 }
 
 
 playAgainButton.addEventListener("click", function (event) {
-  startButton.classList.remove("hide");
-  for (let i = 0; i < finalPage.length; i++) {
-    finalPage[i].classList.add("hide");
-  }
-  number = 0;
+    startButton.classList.remove("hide");
+    for (let i = 0; i < finalPage.length; i++) {
+        finalPage[i].classList.add("hide");
+    }
+    number = 0;
 });
+
 
 function highlightIncorrectAnswers() {
     if (NameButton1.innerText === correctAnswer.toUpperCase()) {
@@ -225,7 +218,7 @@ function highlightIncorrectAnswers() {
 
 scoreTotal = num => {
     score += num;
-    scoreText.innerText = score+" out of 10";
+    scoreText.innerText = score + " out of 10";
 
 }
 
@@ -238,6 +231,7 @@ choices.forEach(choice => {
             scoreTotal(scorePoints)
         }
     })
+
 
 
 });
