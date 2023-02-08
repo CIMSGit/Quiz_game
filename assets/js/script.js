@@ -186,17 +186,7 @@ function highlightCorrectAnswer() {
     NameButton2.style.backgroundColor = "red";
   }
 }
-// function highlightIncorrectAnswers() {
-//   if (NameButton1.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton1.style.backgroundColor = "red";
-//   }
-//   if (NameButton2.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton2.style.backgroundColor = "red";
-//   }
-//   if (NameButton3.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton3.style.backgroundColor = "red";
-//   }
-// }
+
 
 playAgainButton.addEventListener("click", function (event) {
   startButton.classList.remove("hide");
@@ -206,42 +196,26 @@ playAgainButton.addEventListener("click", function (event) {
   number = 0;
 });
 
-// if (NameButton1.innerText === correctAnswer.toUpperCase()) {
-//   // console.log(" button 1 was correct ");
-//   NameButton1.style.backgroundColor = "green";
-//   NameButton2.style.backgroundColor = "red";
-//   NameButton3.style.backgroundColor = "red";
-// } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
-//   // console.log(" button 2 was correct ");
-//   NameButton2.style.backgroundColor = "green";
-//   NameButton1.style.backgroundColor = "red";
-//   NameButton3.style.backgroundColor = "red";
-// } else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
-//   // console.log(" button 3 was correct ");
-//   NameButton3.style.backgroundColor = "green";
-//   NameButton1.style.backgroundColor = "red";
-//   NameButton2.style.backgroundColor = "red";
-// }
 
-// function highlightIncorrectAnswers() {
-//   if (NameButton1.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton1.style.backgroundColor = "red";
-//   }
-//   if (NameButton2.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton2.style.backgroundColor = "red";
-//   }
-//   if (NameButton3.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton3.style.backgroundColor = "red";
-//   }
-// }
+function highlightIncorrectAnswers() {
+    if (NameButton1.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 1 was correct ");
+        NameButton1.style.backgroundColor = "green";
+        NameButton2.style.backgroundColor = "red";
+        NameButton3.style.backgroundColor = "red";
+    } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 2 was correct ");
+        NameButton2.style.backgroundColor = "green";
+        NameButton1.style.backgroundColor = "red";
+        NameButton3.style.backgroundColor = "red";
+    } else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 3 was correct ");
+        NameButton3.style.backgroundColor = "green";
+        NameButton1.style.backgroundColor = "red";
+        NameButton2.style.backgroundColor = "red";
+    }
+}
 
-playAgainButton.addEventListener("click", function (event) {
-  startButton.classList.remove("hide");
-  for (let i = 0; i < finalPage.length; i++) {
-    finalPage[i].classList.add("hide");
-  }
-  number = 0;
-});
 
 scoreTotal = (num) => {
   score += num;
