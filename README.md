@@ -42,7 +42,7 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 ### Source code location
 
-- https://github.com/Ailsadm/Project1
+- https://github.com/Ailsadm/Who-said-the-quote-Quiz
 
 ### Deployed website URL
 
