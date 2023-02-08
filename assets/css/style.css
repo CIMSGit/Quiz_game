@@ -1,12 +1,14 @@
 * {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+
 .hero {
   color: blue;
   background-color: rgb(188, 202, 149);
   font-style: italic;
   font-weight: 900;
 }
+
 .btn {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -43,7 +45,7 @@
 #quoteDisplay {
   font-size: 25px;
 }
-.editcardbody {
+
+.editCardBody {
   border: none;
-  border-color: white;
 }
