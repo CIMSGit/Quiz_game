@@ -179,3 +179,9 @@ function highlightIncorrectAnswers() {
     finalPage[i].classList.add("hide");}
     number =0;
  })
+
+ scoreTotal = num => {
+    score += num;
+    scoreText.innerText = score;
+
+}
