@@ -46,7 +46,7 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 ### Deployed website URL
 
-- https://ailsadm.github.io/Project1/
+- https://ailsadm.github.io/Who-said-the-quote-Quiz/
 
 ## 5. Resources
 
@@ -58,7 +58,7 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 - https://github.com/lukePeavey/quotable#get-random-quote
 
-- http://net-informations.com/js/iq/load.htm
+- https://javascript.info/async-await
 
 - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
