@@ -152,10 +152,11 @@ async function populateAnswers() {
 }
 
 answerbuttons.addEventListener("click", function (event) {
-    highlightCorrectAnswer();
-    //   highlightIncorrectAnswers();
-    // setTimeout(populateAnswers, 2000);
-    populateAnswers();
+
+  highlightCorrectAnswer();
+  //   highlightIncorrectAnswers();
+  setTimeout(populateAnswers, 1000);
+//   populateAnswers();
 });
 
 startButton.addEventListener("click", function (event) {
