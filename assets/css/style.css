@@ -1,5 +1,5 @@
-*{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .hero {
   color: blue;
@@ -32,20 +32,18 @@
   background-color: rgb(29, 91, 142);
 }
 
-#finalPage{
-margin: 10px auto;
+#finalPage {
+  margin: 10px auto;
 }
 
-.scoreDesign{
- font-family:Arial, Helvetica, sans-serif;
-
+.scoreDesign {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#quoteDisplay{
-font-size: 25px;
+#quoteDisplay {
+  font-size: 25px;
 }
-
-.editcardbody{
+.editcardbody {
   border: none;
   border-color: white;
 }
