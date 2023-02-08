@@ -26,7 +26,7 @@ let celebrityName = "MC CRUZ";
 
 let score=0;
 
-let scorePoints = 10;
+let scorePoints = 1;
 let choices = Array.from(document.getElementsByClassName("choices"));
 
 
@@ -225,7 +225,7 @@ function highlightIncorrectAnswers() {
 
 scoreTotal = num => {
     score += num;
-    scoreText.innerText = score;
+    scoreText.innerText = score+" out of 10";
 
 }
 
