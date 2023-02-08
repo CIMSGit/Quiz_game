@@ -44,3 +44,8 @@ margin: 10px auto;
 #quoteDisplay{
 font-size: 25px;
 }
+
+.editcardbody{
+  border: none;
+  border-color: white;
+}
