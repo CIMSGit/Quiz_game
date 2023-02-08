@@ -23,8 +23,9 @@
     </div>
   </div>
   <!-- start button -->
-  <div class="container text-center mx-auto" id="startButton">
+  <div class="container text-center mx-auto p-3" id="startButton">
     <div class="">
+      <img src="./assets/images/quiz.png" alt="quiz image" class="w-25 h-25 scoreCard scoreDesign d-flex justify-content-center mx-auto">
       <button type="button" class="btn btn-secondary col-6 bg-info text-white">
         <h1>Start</h1>
       </button>
@@ -56,14 +57,14 @@
   </div>
   <!-- final page display -->
   <div id="finalPage" class="scoreCard scoreDesign justify-content-center mx-auto mt-3 hide">
-    <div id="finalPage" class="scoreCard-body hide">
+    <img src="./assets/images/celebration-gif.webp" class="img-fluid max-width: 100% height: auto d-flex justify-content-center hide" id="finalPage"
+    alt="image of celebrating minions" />
+    <h2 class="d-flex justify-content-center hide" id="finalPage">Your score is <span id="score"> ** </span>.</h2>
+    <div id="finalPage" class="scoreCard-body d-flex justify-content-center hide">
       <button id="playAgainButton">
           <h1>Play Again</h1>
         </button>
     </div>
-    <img src="./assets/images/celebration-gif.webp" class="img-fluid max-width: 100% height: auto hide" id="finalPage"
-      alt="image of celebrating minions" />
-    <h2 class="hide" id="finalPage">Your score is <span id="score"> ** </span>.</h2>
   </div>
 
   <script src="./assets/js/script.js"></script>
