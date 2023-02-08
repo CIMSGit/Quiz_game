@@ -7,13 +7,18 @@ let NameButton3 = document.querySelector("#NameButton3");
 let answerbuttons = document.querySelector("#answerbuttons");
 let questionNumber = document.querySelector("#questionNumber");
 let startButton = document.querySelector("#startButton");
-let score = document.querySelector("#score");
+let scoreText = document.querySelector("#score");
 let correctAnswer = "";
 let correctButton = 0;
 let celebrityName = "";
 let finalPage = document.querySelectorAll("#finalPage");
 let questionImage = document.querySelector("#questionImage")
 let playAgainButton = document.querySelector("#playAgainButton")
+let score=0;
+let scorePoints = 10;
+let choices = Array.from(document.getElementsByClassName("choices"));
+
+
 
 //common name generation from array
 let commonNamesArray = [
@@ -147,14 +152,17 @@ function highlightCorrectAnswer() {
     if (NameButton1.innerText === correctAnswer.toUpperCase()) {
         // console.log(" button 1 was correct ");
         NameButton1.style.backgroundColor = "green";
+
     }
     else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
         // console.log(" button 2 was correct ");
         NameButton2.style.backgroundColor = "green";
+
     }
     else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
         // console.log(" button 3 was correct ");
         NameButton3.style.backgroundColor = "green";
+
     }
 }
 function highlightIncorrectAnswers() {
@@ -176,3 +184,22 @@ function highlightIncorrectAnswers() {
     finalPage[i].classList.add("hide");}
     number =0;
  })
+
+ scoreTotal = num => {
+    score += num;
+    scoreText.innerText = score;
+
+}
+
+choices.forEach(choice => {
+    
+choice.addEventListener("click", e =>{
+
+    // console.log(e.target)
+    if(e.target.innerText === correctAnswer.toUpperCase()){
+        scoreTotal(scorePoints)
+    }
+})
+
+
+});
