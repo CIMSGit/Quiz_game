@@ -24,235 +24,180 @@ let celebrityName = "MC CRUZ";
 
 let score = 0;
 
-let scorePoints = 10;
+let scorePoints = 1;
 let choices = Array.from(document.getElementsByClassName("choices"));
 
 //common name generation from array
 let commonNamesArray = [
-  "Michael",
-  "Steve",
-  "Jennifer",
-  "Martin",
-  "William",
-  "Charlotte",
-  "Mary",
-  "James",
-  "Robert",
-  "David",
-  "Elizabeth",
-  "Sarah",
-  "Homer",
-  "Geoffrey",
-  "John",
-  "Charles",
-  "Emily",
-  "George",
-  "Henry",
-  "Ann",
-  "Agatha",
-  "Daniel",
+    "Michael",
+    "Steve",
+    "Jennifer",
+    "Martin",
+    "William",
+    "Charlotte",
+    "Mary",
+    "James",
+    "Robert",
+    "David",
+    "Elizabeth",
+    "Sarah",
+    "John",
+    "Charles",
+    "Emily",
+    "George",
+    "Henry",
+    "Ann",
+    "Daniel",
 ];
 
 // function to grab a celebrity name from the api
 async function randomCelebrityNameGenerator() {
-  let randomName =
-    commonNamesArray[Math.floor(Math.random() * commonNamesArray.length)];
-  await fetch(nameGeneratorAPI + randomName, {
-    headers: { "X-Api-Key": "HM4MOd3dfGVsQX8AqXnjlw==ElN28B6ZXeTJkHQM" },
-  })
-    .then((response) => response.json())
-    .then(function (result) {
-      //   console.log(result);
+    let randomName =
+        commonNamesArray[Math.floor(Math.random() * commonNamesArray.length)];
+    await fetch(nameGeneratorAPI + randomName, {
+        headers: { "X-Api-Key": "HM4MOd3dfGVsQX8AqXnjlw==ElN28B6ZXeTJkHQM" },
+    })
+        .then((response) => response.json())
+        .then(function (result) {
+            //   console.log(result);
 
-      let randomCelebrityNameArray = result;
-      nameArrayLength = randomCelebrityNameArray.length;
-      indexCeleb = Math.floor(Math.random() * nameArrayLength + 1);
-      //   console.log("index = " + indexCeleb);
-      randomCelebrityName = randomCelebrityNameArray[indexCeleb];
-      //console.log(
-      // "celebrityName.toUpperCase()  " + celebrityName.toUpperCase()
-      //);
+            let randomCelebrityNameArray = result;
+            nameArrayLength = randomCelebrityNameArray.length;
+            indexCeleb = Math.floor(Math.random() * nameArrayLength + 1);
+            //   console.log("index = " + indexCeleb);
+            randomCelebrityName = randomCelebrityNameArray[indexCeleb];
+            //console.log(
+            // "celebrityName.toUpperCase()  " + celebrityName.toUpperCase()
+            //);
 
-      //button.textContent = celebrityName.toUpperCase();
-    });
+            //button.textContent = celebrityName.toUpperCase();
+        });
 
-  if (randomCelebrityName != null) {
-    celebrityName = randomCelebrityName.name;
-  }
+    if (randomCelebrityName != null) {
+        celebrityName = randomCelebrityName.name;
+    }
 
-  return celebrityName.toUpperCase();
+    return celebrityName.toUpperCase();
 }
 
 async function displayQuote() {
-  quoteDisplay.textContent = "";
-  await fetch(randomQuoteAPI)
-    .then((response) => response.json())
-    .then(function (result) {
-      // console.log(result)
+    quoteDisplay.textContent = "";
+    await fetch(randomQuoteAPI)
+        .then((response) => response.json())
+        .then(function (result) {
+            // console.log(result)
 
-      quoteDisplay.textContent = result.content;
-      correctAnswer = result.author.toUpperCase();
-    });
-  //get randomn number between 1 and 3 to randomise button with correct answer
-  wrongAnswer1 = await randomCelebrityNameGenerator();
-  wrongAnswer2 = await randomCelebrityNameGenerator();
-  //   console.log("wrong1 " + wrongAnswer1);
-  //   console.log("wrong2 " + wrongAnswer2);
-  correctButton = Math.floor(Math.random() * 3) + 1;
-  if (correctButton === 1) {
-    NameButton1.textContent = correctAnswer;
-    NameButton2.textContent = wrongAnswer1;
-    NameButton3.textContent = wrongAnswer2;
-    //randomCelebrityNameGenerator(NameButton2);
-    //randomCelebrityNameGenerator(NameButton3);
-    //NameButton1.textContent = correctAnswer.toUpperCase();
-  } else if (correctButton === 2) {
-    NameButton1.textContent = wrongAnswer1;
-    NameButton2.textContent = correctAnswer;
-    NameButton3.textContent = wrongAnswer2;
-    // randomCelebrityNameGenerator(NameButton1);
-    // randomCelebrityNameGenerator(NameButton3);
-    // NameButton2.textContent = correctAnswer.toUpperCase();
-  } else {
-    NameButton1.textContent = wrongAnswer2;
-    NameButton2.textContent = wrongAnswer1;
-    NameButton3.textContent = correctAnswer;
-    // randomCelebrityNameGenerator(NameButton1);
-    // randomCelebrityNameGenerator(NameButton2);
-    // NameButton3.textContent = correctAnswer.toUpperCase();
-  }
-  // check the correct answer is displaying on random buttons
-  console.log("Correct answer " + correctAnswer.toUpperCase());
-  NameButton1.style.backgroundColor = "";
-  NameButton2.style.backgroundColor = "";
-  NameButton3.style.backgroundColor = "";
+            quoteDisplay.textContent = result.content;
+            correctAnswer = result.author.toUpperCase();
+        });
+    //get randomn number between 1 and 3 to randomise button with correct answer
+    wrongAnswer1 = await randomCelebrityNameGenerator();
+    wrongAnswer2 = await randomCelebrityNameGenerator();
+ 
+    correctButton = Math.floor(Math.random() * 3) + 1;
+    if (correctButton === 1) {
+        NameButton1.textContent = correctAnswer;
+        NameButton2.textContent = wrongAnswer1;
+        NameButton3.textContent = wrongAnswer2;
+    } else if (correctButton === 2) {
+        NameButton1.textContent = wrongAnswer1;
+        NameButton2.textContent = correctAnswer;
+        NameButton3.textContent = wrongAnswer2;
+    } else {
+        NameButton1.textContent = wrongAnswer2;
+        NameButton2.textContent = wrongAnswer1;
+        NameButton3.textContent = correctAnswer;
+    }
+    // check the correct answer is displaying on random buttons
+    console.log("Correct answer " + correctAnswer.toUpperCase());
+    NameButton1.style.backgroundColor = "";
+    NameButton2.style.backgroundColor = "";
+    NameButton3.style.backgroundColor = "";
 }
 
 let number = 0;
 function questionNumberDisplay() {
-  if (number < 11) {
-    number++;
-  }
-
-  questionNumber.textContent = "Question " + number;
-  if (number === 11) {
-    answerbuttons.classList.add("hide");
-    quoteDisplay.classList.add("hide");
-    questionNumber.classList.add("hide");
-    questionImage.classList.add("hide");
-    for (let i = 0; i < finalPage.length; i++) {
-      finalPage[i].classList.remove("hide");
+    if (number < 11) {
+        number++;
     }
-  }
+
+    questionNumber.textContent = "Question " + number;
+    if (number === 11) {
+        answerbuttons.classList.add("hide");
+        quoteDisplay.classList.add("hide");
+        questionNumber.classList.add("hide");
+        questionImage.classList.add("hide");
+        for (let i = 0; i < finalPage.length; i++) {
+            finalPage[i].classList.remove("hide");
+        }
+    }
 }
 
 async function populateAnswers() {
-  await displayQuote();
-  questionNumberDisplay();
+    await displayQuote();
+    questionNumberDisplay();
 }
 
 answerbuttons.addEventListener("click", function (event) {
   highlightCorrectAnswer();
-  //   highlightIncorrectAnswers();
-  // setTimeout(populateAnswers, 2000);
-  populateAnswers();
+  setTimeout(populateAnswers, 1000);
+//   populateAnswers();
 });
 
 startButton.addEventListener("click", function (event) {
-  startButton.classList.add("hide");
-  answerbuttons.classList.remove("hide");
-  quoteDisplay.classList.remove("hide");
-  questionNumber.classList.remove("hide");
-  questionImage.classList.remove("hide");
+    startButton.classList.add("hide");
+    answerbuttons.classList.remove("hide");
+    quoteDisplay.classList.remove("hide");
+    questionNumber.classList.remove("hide");
+    questionImage.classList.remove("hide");
 
-  populateAnswers();
+    populateAnswers();
 });
 
 function highlightCorrectAnswer() {
-  if (NameButton1.innerText === correctAnswer.toUpperCase()) {
-    // console.log(" button 1 was correct ");
-    NameButton1.style.backgroundColor = "green";
-    NameButton2.style.backgroundColor = "red";
-    NameButton3.style.backgroundColor = "red";
-  } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
-    // console.log(" button 2 was correct ");
-    NameButton2.style.backgroundColor = "green";
-    NameButton1.style.backgroundColor = "red";
-    NameButton3.style.backgroundColor = "red";
-  } else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
-    // console.log(" button 3 was correct ");
-    NameButton3.style.backgroundColor = "green";
-    NameButton1.style.backgroundColor = "red";
-    NameButton2.style.backgroundColor = "red";
-  }
-}
-// function highlightIncorrectAnswers() {
-//   if (NameButton1.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton1.style.backgroundColor = "red";
-//   }
-//   if (NameButton2.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton2.style.backgroundColor = "red";
-//   }
-//   if (NameButton3.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton3.style.backgroundColor = "red";
-//   }
-// }
-
-playAgainButton.addEventListener("click", function (event) {
-  startButton.classList.remove("hide");
-  for (let i = 0; i < finalPage.length; i++) {
-    finalPage[i].classList.add("hide");
-  }
-  number = 0;
-});
-
-// if (NameButton1.innerText === correctAnswer.toUpperCase()) {
-//   // console.log(" button 1 was correct ");
-//   NameButton1.style.backgroundColor = "green";
-//   NameButton2.style.backgroundColor = "red";
-//   NameButton3.style.backgroundColor = "red";
-// } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
-//   // console.log(" button 2 was correct ");
-//   NameButton2.style.backgroundColor = "green";
-//   NameButton1.style.backgroundColor = "red";
-//   NameButton3.style.backgroundColor = "red";
-// } else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
-//   // console.log(" button 3 was correct ");
-//   NameButton3.style.backgroundColor = "green";
-//   NameButton1.style.backgroundColor = "red";
-//   NameButton2.style.backgroundColor = "red";
-// }
-
-// function highlightIncorrectAnswers() {
-//   if (NameButton1.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton1.style.backgroundColor = "red";
-//   }
-//   if (NameButton2.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton2.style.backgroundColor = "red";
-//   }
-//   if (NameButton3.innerText !== correctAnswer.toUpperCase()) {
-//     NameButton3.style.backgroundColor = "red";
-//   }
-// }
-
-playAgainButton.addEventListener("click", function (event) {
-  startButton.classList.remove("hide");
-  for (let i = 0; i < finalPage.length; i++) {
-    finalPage[i].classList.add("hide");
-  }
-  number = 0;
-});
-
-scoreTotal = (num) => {
-  score += num;
-  scoreText.innerText = score;
-};
-
-choices.forEach((choice) => {
-  choice.addEventListener("click", (e) => {
-    // console.log(e.target)
-    if (e.target.innerText === correctAnswer.toUpperCase()) {
-      scoreTotal(scorePoints);
+    if (NameButton1.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 1 was correct ");
+        NameButton1.style.backgroundColor = "green";
+        NameButton2.style.backgroundColor = "red";
+        NameButton3.style.backgroundColor = "red";
+    } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 2 was correct ");
+        NameButton2.style.backgroundColor = "green";
+        NameButton1.style.backgroundColor = "red";
+        NameButton3.style.backgroundColor = "red";
+    } else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
+        // console.log(" button 3 was correct ");
+        NameButton3.style.backgroundColor = "green";
+        NameButton1.style.backgroundColor = "red";
+        NameButton2.style.backgroundColor = "red";
     }
-  });
+}
+
+
+playAgainButton.addEventListener("click", function (event) {
+    startButton.classList.remove("hide");
+    for (let i = 0; i < finalPage.length; i++) {
+        finalPage[i].classList.add("hide");
+    }
+    number = 0;
 });
+
+
+scoreTotal = num => {
+    score += num;
+    scoreText.innerText = "Your score is " + score + " out of 10";
+
+}
+
+choices.forEach(choice => {
+
+    choice.addEventListener("click", e => {
+
+        // console.log(e.target)
+        if (e.target.innerText === correctAnswer.toUpperCase()) {
+            scoreTotal(scorePoints)
+        }
+    })
+
+});
+
