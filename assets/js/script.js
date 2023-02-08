@@ -41,15 +41,12 @@ let commonNamesArray = [
     "David",
     "Elizabeth",
     "Sarah",
-    "Homer",
-    "Geoffrey",
     "John",
     "Charles",
     "Emily",
     "George",
     "Henry",
     "Ann",
-    "Agatha",
     "Daniel",
 ];
 
@@ -96,30 +93,20 @@ async function displayQuote() {
     //get randomn number between 1 and 3 to randomise button with correct answer
     wrongAnswer1 = await randomCelebrityNameGenerator();
     wrongAnswer2 = await randomCelebrityNameGenerator();
-    //   console.log("wrong1 " + wrongAnswer1);
-    //   console.log("wrong2 " + wrongAnswer2);
+ 
     correctButton = Math.floor(Math.random() * 3) + 1;
     if (correctButton === 1) {
         NameButton1.textContent = correctAnswer;
         NameButton2.textContent = wrongAnswer1;
         NameButton3.textContent = wrongAnswer2;
-        //randomCelebrityNameGenerator(NameButton2);
-        //randomCelebrityNameGenerator(NameButton3);
-        //NameButton1.textContent = correctAnswer.toUpperCase();
     } else if (correctButton === 2) {
         NameButton1.textContent = wrongAnswer1;
         NameButton2.textContent = correctAnswer;
         NameButton3.textContent = wrongAnswer2;
-        // randomCelebrityNameGenerator(NameButton1);
-        // randomCelebrityNameGenerator(NameButton3);
-        // NameButton2.textContent = correctAnswer.toUpperCase();
     } else {
         NameButton1.textContent = wrongAnswer2;
         NameButton2.textContent = wrongAnswer1;
         NameButton3.textContent = correctAnswer;
-        // randomCelebrityNameGenerator(NameButton1);
-        // randomCelebrityNameGenerator(NameButton2);
-        // NameButton3.textContent = correctAnswer.toUpperCase();
     }
     // check the correct answer is displaying on random buttons
     console.log("Correct answer " + correctAnswer.toUpperCase());
@@ -152,9 +139,7 @@ async function populateAnswers() {
 }
 
 answerbuttons.addEventListener("click", function (event) {
-
   highlightCorrectAnswer();
-  //   highlightIncorrectAnswers();
   setTimeout(populateAnswers, 1000);
 //   populateAnswers();
 });
@@ -198,28 +183,9 @@ playAgainButton.addEventListener("click", function (event) {
 });
 
 
-function highlightIncorrectAnswers() {
-    if (NameButton1.innerText === correctAnswer.toUpperCase()) {
-        // console.log(" button 1 was correct ");
-        NameButton1.style.backgroundColor = "green";
-        NameButton2.style.backgroundColor = "red";
-        NameButton3.style.backgroundColor = "red";
-    } else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
-        // console.log(" button 2 was correct ");
-        NameButton2.style.backgroundColor = "green";
-        NameButton1.style.backgroundColor = "red";
-        NameButton3.style.backgroundColor = "red";
-    } else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
-        // console.log(" button 3 was correct ");
-        NameButton3.style.backgroundColor = "green";
-        NameButton1.style.backgroundColor = "red";
-        NameButton2.style.backgroundColor = "red";
-    }
-}
-
 scoreTotal = num => {
     score += num;
-    scoreText.innerText = score + " out of 10";
+    scoreText.innerText = "Your score is " + score + " out of 10";
 
 }
 
@@ -233,6 +199,5 @@ choices.forEach(choice => {
         }
     })
 
-
-
 });
+
