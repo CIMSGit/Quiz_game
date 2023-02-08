@@ -15,6 +15,8 @@ let finalPage = document.querySelectorAll("#finalPage");
 let questionImage = document.querySelector("#questionImage")
 let playAgainButton = document.querySelector("#playAgainButton")
 let score=0;
+let scorePoints = 10;
+
 
 //common name generation from array
 let commonNamesArray = [
