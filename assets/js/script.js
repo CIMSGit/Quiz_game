@@ -150,14 +150,20 @@ function highlightCorrectAnswer() {
     if (NameButton1.innerText === correctAnswer.toUpperCase()) {
         // console.log(" button 1 was correct ");
         NameButton1.style.backgroundColor = "green";
+        scoreTotal(scorePoints)
+
     }
     else if (NameButton2.innerText === correctAnswer.toUpperCase()) {
         // console.log(" button 2 was correct ");
         NameButton2.style.backgroundColor = "green";
+        scoreTotal(scorePoints)
+
     }
     else if (NameButton3.innerText === correctAnswer.toUpperCase()) {
         // console.log(" button 3 was correct ");
         NameButton3.style.backgroundColor = "green";
+        scoreTotal(scorePoints)
+
     }
 }
 function highlightIncorrectAnswers() {
