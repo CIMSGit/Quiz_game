@@ -4,7 +4,7 @@ let quoteDisplay = document.querySelector("#quoteDisplay");
 let NameButton1 = document.querySelector("#NameButton1");
 let NameButton2 = document.querySelector("#NameButton2");
 let NameButton3 = document.querySelector("#NameButton3");
-let answerbuttons = document.querySelector("#answerbuttons");
+let answerButtons = document.querySelector("#answerButtons");
 let questionNumber = document.querySelector("#questionNumber");
 let startButton = document.querySelector("#startButton");
 let scoreText = document.querySelector("#score");
@@ -93,7 +93,7 @@ async function displayQuote() {
     //get randomn number between 1 and 3 to randomise button with correct answer
     wrongAnswer1 = await randomCelebrityNameGenerator();
     wrongAnswer2 = await randomCelebrityNameGenerator();
- 
+
     correctButton = Math.floor(Math.random() * 3) + 1;
     if (correctButton === 1) {
         NameButton1.textContent = correctAnswer;
@@ -123,7 +123,7 @@ function questionNumberDisplay() {
 
     questionNumber.textContent = "Question " + number;
     if (number === 11) {
-        answerbuttons.classList.add("hide");
+        answerButtons.classList.add("hide");
         quoteDisplay.classList.add("hide");
         questionNumber.classList.add("hide");
         questionImage.classList.add("hide");
@@ -138,15 +138,15 @@ async function populateAnswers() {
     questionNumberDisplay();
 }
 
-answerbuttons.addEventListener("click", function (event) {
-  highlightCorrectAnswer();
-  setTimeout(populateAnswers, 1000);
-//   populateAnswers();
+answerButtons.addEventListener("click", function (event) {
+    highlightCorrectAnswer();
+    setTimeout(populateAnswers, 1000);
+    //   populateAnswers();
 });
 
 startButton.addEventListener("click", function (event) {
     startButton.classList.add("hide");
-    answerbuttons.classList.remove("hide");
+    answerButtons.classList.remove("hide");
     quoteDisplay.classList.remove("hide");
     questionNumber.classList.remove("hide");
     questionImage.classList.remove("hide");
@@ -185,7 +185,7 @@ playAgainButton.addEventListener("click", function (event) {
 
 scoreTotal = num => {
     score += num;
-    scoreText.innerText = "Your score is " + score + " out of 10";
+    scoreText.innerText = "Your score is " + score + " out of 10.";
 
 }
 
