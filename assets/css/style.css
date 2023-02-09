@@ -3,7 +3,7 @@
 }
 .hero, .playAgainOutcome{
   color: rgb(10, 10, 129);
-  background-color: rgba(128, 128, 128, 0.156);
+  background-color: rgba(65, 64, 53, 0.315);
   font-style: italic;
   font-weight: 900;
 }
@@ -20,7 +20,7 @@
 }
 
 #startButton {
-  background-color: rgba(128, 128, 128, 0.156);
+  background-color: rgba(65, 64, 53, 0.315);
 }
 
 .card {
