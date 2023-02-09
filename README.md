@@ -1,4 +1,4 @@
-# Project1 - Who said the Qoute Quiz
+# Who said the Quote Quiz
 
 ## Description
 
@@ -18,7 +18,7 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 ## 1. Visual
 
-### Image of the project in the webpage.
+### Image of the project in the webpage view.
 
 <img src="./assets/images/to-start.png" alt="image of the page displaying a start button"/>
 
@@ -26,21 +26,21 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 <img src="./assets/images/score.png" alt="image of the page displaying the user score"/>
 
-### short video clip to display the webpage responsiveness of the App.
+### Below is a short video clip to display the responsiveness of the App.
 
-<img src="./assets/images/page-responsiveness.mp4" alt="vedio clip to display the page background change color and text color" />
+https://user-images.githubusercontent.com/116744496/217882639-caf843e0-a326-4c4a-b14a-8a724d36fff6.mp4
 
 ## 2. Demo how to play the App
 
-<img src="./assets/images/demo-vedio.mp4" alt="vedio showing how to play the quiz game" />
+https://user-images.githubusercontent.com/116744496/217884952-4f7a4005-18aa-4f43-83c3-87699da26483.mp4
 
 ## 3. How to use the app
 
 1. Read the instruction on how to play the quiz game.
 2. Click the START button to display the quotes and the choices.
-3. The timer starts when the user clicked the start button.
-4. The chosen button will turn green when user clicked the correct answer.
-5. The user can view the score after the quiz.
+3. The timer starts when the user clicks the start button.
+4. The correct answer's button will turn green when user selects their answer.
+5. The user can view their score after the quiz.
 
 ## 4. Built with:
 
