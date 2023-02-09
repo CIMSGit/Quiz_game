@@ -81,7 +81,7 @@ async function randomCelebrityNameGenerator() {
 }
 
 async function displayQuote() {
-  quoteDisplay.textContent = "";
+  // quoteDisplay.textContent = "";
   wrongAnswer1 = await randomCelebrityNameGenerator();
   wrongAnswer2 = await randomCelebrityNameGenerator();
   await fetch(randomQuoteAPI)
@@ -123,6 +123,11 @@ function questionNumberDisplay() {
 
   questionNumber.textContent = "Question " + number;
   if (number === 11) {
+    questionNumber.textContent = "";
+    NameButton1.textContent = "";
+    NameButton2.textContent = "";
+    NameButton3.textContent = "";
+    quoteDisplay.textContent = "";
     answerButtons.classList.add("hide");
     quoteDisplay.classList.add("hide");
     questionNumber.classList.add("hide");
