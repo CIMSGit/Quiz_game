@@ -82,6 +82,8 @@ async function randomCelebrityNameGenerator() {
 
 async function displayQuote() {
   quoteDisplay.textContent = "";
+  wrongAnswer1 = await randomCelebrityNameGenerator();
+  wrongAnswer2 = await randomCelebrityNameGenerator();
   await fetch(randomQuoteAPI)
     .then((response) => response.json())
     .then(function (result) {
@@ -91,8 +93,6 @@ async function displayQuote() {
       correctAnswer = result.author.toUpperCase();
     });
   //get randomn number between 1 and 3 to randomise button with correct answer
-  wrongAnswer1 = await randomCelebrityNameGenerator();
-  wrongAnswer2 = await randomCelebrityNameGenerator();
 
   correctButton = Math.floor(Math.random() * 3) + 1;
   if (correctButton === 1) {
