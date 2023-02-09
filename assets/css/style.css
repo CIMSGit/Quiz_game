@@ -2,8 +2,8 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .hero, .playAgainOutcome{
-  color: blue;
-  background-color: rgb(188, 202, 149);
+  color: rgb(10, 10, 129);
+  background-color: rgba(128, 128, 128, 0.156);
   font-style: italic;
   font-weight: 900;
 }
@@ -20,7 +20,7 @@
 }
 
 #startButton {
-  background-color: rgb(188, 202, 149);
+  background-color: rgba(128, 128, 128, 0.156);
 }
 
 .card {
@@ -53,6 +53,7 @@
   body {
     background-color: blueviolet;
   }
+
   #score {
     color: white;
   }
