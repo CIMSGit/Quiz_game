@@ -49,3 +49,12 @@
 .editCardBody {
   border: none;
 }
+
+@media screen and (max-width: 525px) {
+  body {
+    background-color: blueviolet;
+  }
+  #score {
+    color: white;
+  }
+}
