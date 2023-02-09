@@ -28,11 +28,11 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 ### short video clip to display the webpage responsiveness of the App.
 
-<img src="./assets/images/page-responsiveness.mkv" alt="vedio clip to display the page background change color and text color" />
+<img src="./assets/images/page-responsiveness.mp4" alt="vedio clip to display the page background change color and text color" />
 
 ## 2. Demo how to play the App
 
-<img src="./assets/images/demo-vedio.mkv" alt="vedio showing how to play the quiz game" />
+<img src="./assets/images/demo-vedio.mp4" alt="vedio showing how to play the quiz game" />
 
 ## 3. How to use the app
 
