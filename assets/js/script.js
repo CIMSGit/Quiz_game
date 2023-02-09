@@ -16,6 +16,7 @@ let randomCelebrityName = "";
 let indexCeleb = 0;
 let nameArrayLength = 0;
 let finalPage = document.querySelectorAll("#finalPage");
+let scoreDataCheck = document.querySelector("#scoreDataCheck")
 
 let questionImage = document.querySelector("#questionImage");
 let playAgainButton = document.querySelector("#playAgainButton");
@@ -120,7 +121,7 @@ function questionNumberDisplay() {
   if (number < 11) {
     number++;
   }
-
+    
   questionNumber.textContent = "Question " + number;
   if (number === 11) {
     questionNumber.textContent = "";
@@ -135,7 +136,15 @@ function questionNumberDisplay() {
     for (let i = 0; i < finalPage.length; i++) {
       finalPage[i].classList.remove("hide");
     }
+        console.log(localStorage)
+        console.log(JSON.parse(localStorage.getItem("scores")))
+        if (JSON.parse(localStorage.getItem("scores"))){
+            checkIfScoreHigher()
+            
+        }
+        localStorage.setItem('scores', JSON.stringify(score));
   }
+
 }
 
 async function populateAnswers() {
@@ -200,3 +209,4 @@ choices.forEach((choice) => {
     }
   });
 });
+
