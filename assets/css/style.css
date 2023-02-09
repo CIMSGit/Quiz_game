@@ -1,7 +1,7 @@
 *{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.hero {
+.hero, .playAgainOutcome{
   color: blue;
   background-color: rgb(188, 202, 149);
   font-style: italic;
