@@ -1,70 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who said the Quote Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Who said the Quote Quiz</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-
-<body>
-  <!-- heading -->
-  <div class="jumbotron jumbotron-fluid hero">
-    <div class="container">
-      <h1 class="display-4 text-center">Who said the QUOTE quiz!</h1>
+  <body>
+    <!-- heading -->
+    <div class="jumbotron jumbotron-fluid hero">
+      <div class="container">
+        <h1 class="display-4 text-center">Who said the QUOTE!</h1>
+      </div>
     </div>
-  </div>
-  <!-- start button -->
-  <div class="container text-center mx-auto p-3" id="startButton">
-    <div class="">
-      <img src="./assets/images/quiz.png" alt="quiz image" class="w-25 h-25 scoreCard scoreDesign d-flex justify-content-center mx-auto">
-      <button type="button" class="btn btn-secondary col-6 bg-info text-white">
-        <h1>Start</h1>
-      </button>
-    </div>
-  </div>
-
-  <!-- location for quote question -->
-  <div class="card editcardbody d-flex justify-content-center mx-auto mt-3">
-    <img src="./assets/images/577fdd4e8c36b.jpg" class="card-img-top hide" id="questionImage"alt="..." />
-    <div class="card-body editcardbody">
-      <h5 class="card-title text-center hide" id="questionNumber"></h5>
-      <p class="card-text hide" id="quoteDisplay"></p>
-    </div>
-  </div>
-  <!-- buttons for selecting an answer -->
-
-  <div class="container hide mt-2 hide" id="answerbuttons">
-    <div class="text-left">
-      <button type="button" class="btn btn-secondary col-6 choices" id="NameButton1"></button>
+    <!-- start button -->
+    <div class="container text-center mx-auto p-3" id="startButton">
+      <div class="">
+        <img
+          src="./assets/images/quiz.png"
+          alt="quiz image"
+          class="w-25 h-25 scoreCard scoreDesign d-flex justify-content-center mx-auto"
+        />
+        <button
+          type="button"
+          class="btn btn-secondary col-6 bg-info text-white"
+        >
+          <h1>Start</h1>
+        </button>
+      </div>
     </div>
 
-    <div class="text-center mt-2">
-      <button type="button" class="btn btn-secondary col-6 choices" id="NameButton2"></button>
+    <!-- location for quote question -->
+    <div class="card editCardBody d-flex justify-content-center mx-auto mt-3">
+      <img
+        src="./assets/images/577fdd4e8c36b.jpg"
+        class="card-img-top hide"
+        id="questionImage"
+        alt="an image of a lady on the phone"
+      />
+      <div>
+        <h5 class="card-title text-center hide" id="questionNumber"></h5>
+        <p class="card-text hide" id="quoteDisplay"></p>
+      </div>
     </div>
+    <!-- buttons for selecting an answer -->
 
-    <div class="text-right mt-2">
-      <button type="button" class="btn btn-secondary col-6 choices" id="NameButton3"></button>
+    <div class="container hide mt-2 hide" id="answerButtons">
+      <div class="text-left">
+        <button
+          type="button"
+          class="btn btn-secondary col-6 choices"
+          id="NameButton1"
+        ></button>
+      </div>
+
+      <div class="text-center mt-2">
+        <button
+          type="button"
+          class="btn btn-secondary col-6 choices"
+          id="NameButton2"
+        ></button>
+      </div>
+
+      <div class="text-right mt-2">
+        <button
+          type="button"
+          class="btn btn-secondary col-6 choices"
+          id="NameButton3"
+        ></button>
+      </div>
     </div>
-  </div>
-  <!-- final page display -->
-  <div id="finalPage" class="scoreCard scoreDesign justify-content-center mx-auto mt-3 hide">
-    <img src="./assets/images/celebration-gif.webp" class="img-fluid max-width: 100% height: auto d-flex justify-content-center hide" id="finalPage"
-    alt="image of celebrating minions" />
-    <h2 class="d-flex justify-content-center hide" id="finalPage"> <span id="score"> ** </span>.</h2>
-    <div id="finalPage" class="scoreCard-body d-flex justify-content-center hide">
-      <button id="playAgainButton">
+    <!-- final page display -->
+    <div
+      id="finalPage"
+      class="scoreCard scoreDesign justify-content-center mx-auto mt-3 hide"
+    >
+      <img
+        src="./assets/images/celebration-gif.webp"
+        class="img-fluid max-width: 100% height: auto d-flex justify-content-center hide"
+        id="finalPage"
+        alt="image of celebrating minions"
+      />
+      <h2 class="d-flex justify-content-center hide" id="finalPage">
+        <span id="score"> Your score is 0 out of 10. </span>
+      </h2>
+      <div
+        id="finalPage"
+        class="scoreCard-body d-flex justify-content-center hide"
+      >
+        <button id="playAgainButton">
           <h1>Play Again</h1>
         </button>
     </div>
       <h3 id="scoreDataCheck" class="d-flex justify-content-center mt-3 p-3 playAgainOutcome"></h3>
   </div>
 
-  <script src="./assets/js/script.js"></script>
-</body>
-
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

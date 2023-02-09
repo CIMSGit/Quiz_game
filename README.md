@@ -1,4 +1,4 @@
-# Project1 - Who said the Qoute Quiz
+# Who said the Quote Quiz
 
 ## Description
 
@@ -9,19 +9,40 @@ This Quote App will let the user test their skills and knowledge by choosing the
 ## Table of Content
 
 1. Visual
-2. Built with:
-3. How to use the app
-4. Links
-5. Resources
-6. License
+2. Demo
+3. Built with:
+4. How to use the app
+5. Links
+6. Resources
+7. License
 
 ## 1. Visual
 
-### Image of the project in console view.
+### Image of the project in the webpage view.
 
-- <img src= "">
+<img src="./assets/images/to-start.png" alt="image of the page displaying a start button"/>
 
-## 2. Built with:
+<img src="./assets/images/correct-answer-green.png" alt="image of the page displaying the correct answer in green button"/>
+
+<img src="./assets/images/score.png" alt="image of the page displaying the user score"/>
+
+### Below is a short video clip to display the responsiveness of the App.
+
+https://user-images.githubusercontent.com/116744496/217882639-caf843e0-a326-4c4a-b14a-8a724d36fff6.mp4
+
+## 2. Demo how to play the App
+
+https://user-images.githubusercontent.com/116744496/217884952-4f7a4005-18aa-4f43-83c3-87699da26483.mp4
+
+## 3. How to use the app
+
+1. Read the instruction on how to play the quiz game.
+2. Click the START button to display the quotes and the choices.
+3. The timer starts when the user clicks the start button.
+4. The correct answer's button will turn green when user selects their answer.
+5. The user can view their score after the quiz.
+
+## 4. Built with:
 
 - **Bootstrap** is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
 - **API** are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols.
@@ -30,25 +51,17 @@ This Quote App will let the user test their skills and knowledge by choosing the
 - **HTML** is the standard markup language for creating Web pages, describes the structure of a Web page and consists of a series of elements.
 - **Local Storage** is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date, the data stored in the browser will persist even after the browser window is closed
 
-## 3. How to use the app
-
-1. Read the instruction on how to play the quiz game.
-2. Click the START button to display the quotes and the choices.
-3. The timer starts when the user clicked the start button.
-4. The chosen button will turn green when user clicked the correct answer.
-5. The user can view the score after the quiz.
-
-## 4. Links
+## 5. Links
 
 ### Source code location
 
-- https://github.com/Ailsadm/Project1
+- https://github.com/Ailsadm/Who-said-the-quote-Quiz
 
 ### Deployed website URL
 
 - https://ailsadm.github.io/Who-said-the-quote-Quiz/
 
-## 5. Resources
+## 6. Resources
 
 ### URL for resources
 
@@ -68,6 +81,6 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 #### https://api-ninjas.com/api/celebrity
 
-## 6. License
+## 7. License
 
 This project is licensed by MIT.
