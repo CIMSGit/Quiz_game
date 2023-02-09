@@ -9,26 +9,30 @@ This Quote App will let the user test their skills and knowledge by choosing the
 ## Table of Content
 
 1. Visual
-2. Built with:
-3. How to use the app
-4. Links
-5. Resources
-6. License
+2. Demo
+3. Built with:
+4. How to use the app
+5. Links
+6. Resources
+7. License
 
 ## 1. Visual
 
-### Image of the project in console view.
+### Image of the project in the webpage.
 
-- <img src= "">
+<img src="./assets/images/to-start.png" alt="image of the page displaying a start button"/>
 
-## 2. Built with:
+<img src="./assets/images/correct-answer-green.png" alt="image of the page displaying the correct answer in green button"/>
 
-- **Bootstrap** is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
-- **API** are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols.
-- **JavaScript** is a scripting or programming language that allows you to implement complex features on web pages.
-- **CSS** is a computer language for laying out and structuring web pages
-- **HTML** is the standard markup language for creating Web pages, describes the structure of a Web page and consists of a series of elements.
-- **Local Storage** is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date, the data stored in the browser will persist even after the browser window is closed
+<img src="./assets/images/score.png" alt="image of the page displaying the user score"/>
+
+### short video clip to display the webpage responsiveness of the App.
+
+<img src="./assets/images/page-responsiveness.mp4" alt="vedio clip to display the page background change color and text color" />
+
+## 2. Demo how to play the App
+
+<img src="./assets/images/demo-vedio.mp4" alt="vedio showing how to play the quiz game" />
 
 ## 3. How to use the app
 
@@ -38,7 +42,16 @@ This Quote App will let the user test their skills and knowledge by choosing the
 4. The chosen button will turn green when user clicked the correct answer.
 5. The user can view the score after the quiz.
 
-## 4. Links
+## 4. Built with:
+
+- **Bootstrap** is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+- **API** are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols.
+- **JavaScript** is a scripting or programming language that allows you to implement complex features on web pages.
+- **CSS** is a computer language for laying out and structuring web pages
+- **HTML** is the standard markup language for creating Web pages, describes the structure of a Web page and consists of a series of elements.
+- **Local Storage** is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date, the data stored in the browser will persist even after the browser window is closed
+
+## 5. Links
 
 ### Source code location
 
@@ -48,7 +61,7 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 - https://ailsadm.github.io/Who-said-the-quote-Quiz/
 
-## 5. Resources
+## 6. Resources
 
 ### URL for resources
 
@@ -68,6 +81,6 @@ This Quote App will let the user test their skills and knowledge by choosing the
 
 #### https://api-ninjas.com/api/celebrity
 
-## 6. License
+## 7. License
 
 This project is licensed by MIT.
