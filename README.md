@@ -59,7 +59,7 @@ https://user-images.githubusercontent.com/116744496/217884952-4f7a4005-18aa-4f43
 
 ### Deployed website URL
 
-- https://ailsadm.github.io/Who-said-the-quote-Quiz/
+- https://cimsgit.github.io/Quiz_game/
 
 ## 6. Resources
 
